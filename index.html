@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUREZA PARADISE HOTEL</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            background: #F4F4F4;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .logo {
+            height: 85px;
+            width: auto;
+            max-width: 120px;
+            flex-shrink: 0;
+            border-radius: 6px;
+            object-fit: contain;
+        }
+
+        .welcome-content {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #D4AF37;
+            margin-bottom: 10px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .welcome-text {
+            font-size: 1rem;
+            color: #666;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #D4AF37;
+            margin-bottom: 15px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #D4AF37;
+        }
+
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .service-item {
+            padding: 15px;
+            background: white;
+            border-radius: 6px;
+            color: #333;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .service-item:hover {
+            border-color: #D4AF37;
+            transform: translateY(-2px);
+        }
+
+        .contact-section {
+            background: white;
+            padding: 30px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            color: #333;
+            flex: 1;
+            text-align: left;
+        }
+
+        .contact-value {
+            color: #666;
+            flex: 1;
+            text-align: right;
+        }
+
+        .action-btn {
+            padding: 10px 20px;
+            background: #D4AF37;
+            color: #1a1a1a;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .action-btn:hover {
+            background: #B8941F;
+            transform: scale(1.05);
+        }
+
+        .action-btn.call-btn {
+            margin-right: 8px;
+        }
+
+        .location-section {
+            background: white;
+            padding: 30px;
+            border-radius: 6px;
+            margin-top: 10px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .location-details {
+            text-align: left;
+            flex: 0 0 160px;
+            min-width: 140px;
+        }
+
+        .location-item {
+            margin-bottom: 12px;
+            color: #666;
+        }
+
+        .location-item strong {
+            color: #333;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .location-map {
+            flex: 4;
+            min-height: 300px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .location-map iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            border: none;
+            border-radius: 6px;
+        }
+
+        .email-section {
+            background: white;
+            padding: 30px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .email-text {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .email-link {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #D4AF37;
+            color: #1a1a1a;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .email-link:hover {
+            background: #B8941F;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .email-link:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .header-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .logo {
+                height: 70px;
+                width: auto;
+                max-width: 100px;
+            }
+
+            .welcome-content {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.3rem;
+            }
+
+            .services-list {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-section {
+                padding: 20px;
+            }
+
+            .location-section {
+                padding: 20px;
+                flex-direction: column;
+            }
+
+            .location-map {
+                width: 100%;
+                min-height: 250px;
+            }
+
+            .email-section {
+                padding: 20px;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .contact-value {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-section">
+            <img src="aureza logo.jpg" alt="AUREZA PARADISE HOTEL Logo" class="logo">
+            <div class="welcome-content">
+                <h1>AUREZA PARADISE HOTEL</h1>
+                <p class="welcome-text">Your perfect getaway in Tamale</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-list">
+                <div class="service-item">Accommodation</div>
+                <div class="service-item">Conferences</div>
+                <div class="service-item">Restaurant</div>
+                <div class="service-item">Swimming Pools</div>
+                <div class="service-item">Laundry</div>
+                <div class="service-item">Serene Gardens</div>
+                <div class="service-item">Parking Space</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-section">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">Phone 1:</span>
+                        <span class="contact-value">0200011196</span>
+                        <a href="tel:+233200011196" class="action-btn call-btn">Call</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone 2:</span>
+                        <span class="contact-value">0547795690</span>
+                        <a href="tel:+233547795690" class="action-btn call-btn">Call</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Location</h2>
+            <div class="location-section">
+                <div class="location-details">
+                    <div class="location-item">
+                        <strong>Address:</strong>
+                        Malshegu, Tamale
+                    </div>
+                    <div class="location-item">
+                        <strong>Digital Address:</strong>
+                        NS-522-8759
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=9.491158694435885,-0.8808967835476006" 
+                       class="action-btn" target="_blank" style="margin-top: 15px;">Get Directions</a>
+                </div>
+                <div class="location-map">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=9.491158694435885,-0.8808967835476006&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Email Us</h2>
+            <div class="email-section">
+                <p class="email-text">
+                    Have a question or want to make a reservation? Send us an email and we'll get back to you as soon as possible.
+                </p>
+                <a href="mailto:aurezaparadisehotel@yahoo.com" class="email-link">Send Email</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // No JavaScript needed - using native tel: and mailto: links
+        // These will automatically open the phone dialer and email app on mobile devices
+    </script>
+</body>
+</html>
+
