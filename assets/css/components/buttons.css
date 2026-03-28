@@ -34,7 +34,7 @@
     font-weight: 600;
     font-size: 1rem;
     transition: var(--transition);
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    box-shadow: none !important;
     border: none;
     cursor: pointer;
     touch-action: manipulation;
@@ -44,7 +44,7 @@
 .email-link:hover {
     background: var(--gold-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+    box-shadow: none !important;
 }
 
 .email-link:active {

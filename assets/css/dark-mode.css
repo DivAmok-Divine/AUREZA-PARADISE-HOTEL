@@ -1,0 +1,116 @@
+/* 🌙 MIDNIGHT LUXURY THEME (Simple Overrides) */
+[data-theme="dark"] body {
+    background-color: #0A0B0D;
+}
+
+[data-theme="dark"] .container {
+    background-color: #14171C;
+    box-shadow: none !important;
+    color: #888888;
+    /* Consistent Ash Gray */
+}
+
+/* 🌑 ALL TEXT IN THE APP SHOULD BE ASH GRAY IN DARK MODE */
+[data-theme="dark"] h1,
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .welcome-text,
+[data-theme="dark"] .service-item-text,
+[data-theme="dark"] .contact-label,
+[data-theme="dark"] .location-item,
+[data-theme="dark"] .location-item strong,
+[data-theme="dark"] .email-text,
+[data-theme="dark"] .contact-value,
+[data-theme="dark"] .footer-text,
+[data-theme="dark"] .footer-design {
+    color: #888888 !important;
+}
+
+[data-theme="dark"] .service-item,
+[data-theme="dark"] .contact-section,
+[data-theme="dark"] .location-section,
+[data-theme="dark"] .email-section {
+    background: #1A1E24 !important;
+    border: 1px solid #888888 !important;
+    /* ALL BOX LINES ASH GRAY */
+}
+
+/* 🌑 ALL SECTION DIVIDERS & FOOTER LINES ASH GRAY */
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .contact-item,
+[data-theme="dark"] .contact-info,
+[data-theme="dark"] .location-details,
+[data-theme="dark"] .footer {
+    border-color: #888888 !important;
+}
+
+[data-theme="dark"] .contact-item {
+    border-bottom: 1px solid #888888 !important;
+}
+
+[data-theme="dark"] .contact-item:last-child {
+    border-bottom: none !important;
+}
+
+[data-theme="dark"] .footer {
+    border-top: 1px solid #888888 !important;
+}
+
+[data-theme="dark"] .footer-text,
+[data-theme="dark"] .footer-design {
+    color: #888888 !important;
+}
+
+/* 🗺️ THE MIDNIGHT MAP (Inverted Filter) */
+[data-theme="dark"] .location-map iframe {
+    filter: invert(90%) hue-rotate(180deg) brightness(100%) contrast(95%);
+    border: none;
+    opacity: 0.8;
+}
+
+/* THEME TOGGLE BUTTON STYLING (Now Absolute to Container) */
+.theme-toggle-btn {
+    position: absolute !important;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background: var(--gold);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: none !important;
+    transition: background 0.3s ease;
+    /* No motion-flicker */
+}
+
+/* 🌑 THEME BUTTON TURNS GRAY IN DARK MODE */
+[data-theme="dark"] .theme-toggle-btn {
+    background: #888888 !important;
+}
+
+[data-theme="dark"] .theme-toggle-btn svg {
+    color: #14171C !important;
+    /* Dark icon on gray button */
+}
+
+.theme-toggle-btn svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+@media (max-width: 600px) {
+    .theme-toggle-btn {
+        top: 15px;
+        right: 15px;
+        width: 38px;
+        height: 38px;
+    }
+}

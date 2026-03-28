@@ -1,21 +1,22 @@
 /* 5.2 SERVICES SECTION */
 .services-list {
     display: grid;
-    /* Simplest, most robust way to get 2 columns on desktop and 1 on mobile */
+    /* 2 COLUMNS ON ALL SCREENS - ALWAYS */
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 10px;
     width: 100%;
 }
 
 .service-item {
-    padding: 15px;
+    padding: 12px 15px;
     background: var(--white);
     border-radius: var(--border-radius-md);
     color: var(--text-main);
     font-weight: 500;
     text-align: left;
     transition: var(--transition);
-    border: 2px solid transparent;
+    border: 1px solid transparent; /* UNIFIED BORDER (Stops the jump) */
+    cursor: pointer;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
     width: 100%;
@@ -23,24 +24,28 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 8px;
 }
 
-/* Force the Parking Space to span both columns regardless of position */
+/* The Parking Space always spans both columns at the bottom */
 .service-item.full-width {
     grid-column: 1 / 3;
-    justify-content: center;
+    justify-content: center !important;
 }
 
 .service-item.full-width .service-item-text {
     text-align: center;
-    flex: 0 1 auto;
+    flex: 0 1 auto !important;
 }
 
 .service-item-text {
     flex: 1;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    z-index: 5;
 }
 
+/* Stable Icon Alignment */
 .service-icon {
     width: 24px;
     height: 24px;
@@ -49,26 +54,46 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 5;
 }
 
+
+
+/* CLEAN LINE-ART GOLD ICONS */
 .service-icon svg {
     width: 100%;
     height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    /* UNIVERSAL BALANCING (Makes all icons identical in size) */
+    transform: scale(0.88);
 }
 
 .service-item:hover {
     border-color: var(--gold);
     transform: translateY(-2px);
+    box-shadow: none !important;
 }
 
-/* Mobile: Switch to 1 column and reset the spanning item */
-@media (max-width: 600px) {
+@media (min-width: 601px) {
     .services-list {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 12px;
     }
-    
-    .service-item.full-width {
-        grid-column: auto;
+
+    .service-item-text {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item {
+        padding: 10px 12px;
+    }
+
+    .service-item-text {
+        font-size: 0.8rem;
     }
 }

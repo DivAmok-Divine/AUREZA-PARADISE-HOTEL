@@ -5,6 +5,7 @@
 /* 2. COMPONENTS */
 @import url('components/buttons.css');
 @import url('components/section-title.css');
+@import url('components/gallery.css');
 
 /* 3. MODULES */
 @import url('modules/header.css');
@@ -13,6 +14,7 @@
 @import url('modules/location.css');
 @import url('modules/email.css');
 @import url('modules/footer.css');
+@import url('dark-mode.css');
 
 /* 4. RESPONSIVE */
 @import url('responsive.css');

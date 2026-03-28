@@ -4,7 +4,7 @@
     .container {
         padding: 25px 18px;
         border-radius: var(--border-radius-md);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        box-shadow: none !important;
     }
     .header-section {
         flex-direction: column;
@@ -19,16 +19,6 @@
     .section { margin-bottom: 30px; }
     .section-title { font-size: 1.3rem; margin-bottom: 12px; padding-bottom: 8px; }
     
-    /* FIX: Unset the hardcoded column/row rules so items stack correctly */
-    .services-list { 
-        grid-template-columns: 1fr; 
-        gap: 10px; 
-    }
-    .service-item {
-        grid-column: auto !important;
-        grid-row: auto !important;
-    }
-
     .contact-section { padding: 20px 18px; }
     .contact-item { flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px 0; }
     .contact-label { font-size: 0.95rem; }
@@ -55,7 +45,6 @@
     .section { margin-bottom: 25px; }
     .section-title { font-size: 1.2rem; margin-bottom: 10px; padding-bottom: 6px; }
     .services-list { gap: 8px; }
-    .service-item { padding: 12px; font-size: 0.9rem; }
     .contact-section, .location-section, .email-section { padding: 18px 15px; }
     .contact-item { padding: 12px 0; gap: 8px; }
     .contact-label { font-size: 0.9rem; }

@@ -6,8 +6,8 @@
     --white: #ffffff;
     --text-main: #333333;
     --text-muted: #666666;
-    --shadow: rgba(0, 0, 0, 0.5);
-    
+    --shadow: none; /* GLOBAL SHADOWS DISABLED */
+
     /* Global Shared Rules */
     --border-radius-sm: 4px;
     --border-radius-md: 6px;
