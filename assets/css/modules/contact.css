@@ -1,0 +1,36 @@
+.contact-section {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius-md);
+    margin-top: 10px;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-label {
+    font-weight: 600;
+    color: var(--text-main);
+    flex: 1;
+    text-align: left;
+}
+
+.contact-value {
+    color: var(--text-muted);
+    flex: 1;
+    text-align: right;
+}

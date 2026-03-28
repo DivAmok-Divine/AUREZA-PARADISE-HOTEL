@@ -1,0 +1,12 @@
+.email-section {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius-md);
+    margin-top: 10px;
+}
+
+.email-text {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}

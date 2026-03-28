@@ -1,0 +1,52 @@
+.action-btn {
+    padding: 10px 20px;
+    background: var(--gold);
+    color: var(--dark);
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-block;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.action-btn:hover {
+    background: var(--gold-hover);
+    transform: scale(1.05);
+}
+
+.action-btn.call-btn {
+    margin-right: 8px;
+}
+
+.email-link {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--gold);
+    color: var(--dark);
+    text-decoration: none;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    border: none;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.email-link:hover {
+    background: var(--gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+
+.email-link:active {
+    transform: translateY(0);
+}

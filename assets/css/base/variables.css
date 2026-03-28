@@ -1,0 +1,16 @@
+:root {
+    --gold: #D4AF37;
+    --gold-hover: #B8941F;
+    --dark: #1a1a1a;
+    --light: #F4F4F4;
+    --white: #ffffff;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --shadow: rgba(0, 0, 0, 0.5);
+    
+    /* Global Shared Rules */
+    --border-radius-sm: 4px;
+    --border-radius-md: 6px;
+    --border-radius-lg: 8px;
+    --transition: all 0.3s ease;
+}

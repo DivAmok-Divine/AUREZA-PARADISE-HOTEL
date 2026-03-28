@@ -1,0 +1,94 @@
+/* 7.1 TABLETS & LARGE PHONES */
+@media (max-width: 600px) {
+    body { padding: 8px; }
+    .container {
+        padding: 25px 18px;
+        border-radius: var(--border-radius-md);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    }
+    .header-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+    .logo { height: 70px; max-width: 100px; }
+    .welcome-content { text-align: center; }
+    h1 { font-size: 1.75rem; line-height: 1.3; }
+    .welcome-text { font-size: 1.5rem; font-weight: 700; }
+    .section { margin-bottom: 30px; }
+    .section-title { font-size: 1.3rem; margin-bottom: 12px; padding-bottom: 8px; }
+    
+    /* FIX: Unset the hardcoded column/row rules so items stack correctly */
+    .services-list { 
+        grid-template-columns: 1fr; 
+        gap: 10px; 
+    }
+    .service-item {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+    .contact-section { padding: 20px 18px; }
+    .contact-item { flex-direction: column; align-items: flex-start; gap: 10px; padding: 14px 0; }
+    .contact-label { font-size: 0.95rem; }
+    .contact-value { text-align: left; font-size: 0.9rem; width: 100%; }
+    .action-btn { width: 100%; padding: 12px 20px; font-size: 0.95rem; margin-top: 8px; }
+    .action-btn.call-btn { margin-right: 0; }
+    .location-section { padding: 20px 18px; flex-direction: column; gap: 20px; }
+    .location-details { flex: 1; width: 100%; }
+    .location-map { width: 100%; min-height: 280px; flex: 1; }
+    .location-map iframe { min-height: 280px; }
+    .email-section { padding: 20px 18px; }
+    .email-text { font-size: 0.95rem; margin-bottom: 18px; }
+    .email-link { width: 100%; padding: 14px 30px; font-size: 0.95rem; }
+}
+
+/* 7.2 MEDIUM PHONES */
+@media (max-width: 480px) {
+    body { padding: 5px; }
+    .container { padding: 20px 15px; border-radius: var(--border-radius-sm); }
+    .header-section { gap: 12px; margin-bottom: 20px; }
+    .logo { height: 60px; max-width: 90px; }
+    h1 { font-size: 1.5rem; margin-bottom: 8px; }
+    .welcome-text { font-size: 1.3rem; font-weight: 700; }
+    .section { margin-bottom: 25px; }
+    .section-title { font-size: 1.2rem; margin-bottom: 10px; padding-bottom: 6px; }
+    .services-list { gap: 8px; }
+    .service-item { padding: 12px; font-size: 0.9rem; }
+    .contact-section, .location-section, .email-section { padding: 18px 15px; }
+    .contact-item { padding: 12px 0; gap: 8px; }
+    .contact-label { font-size: 0.9rem; }
+    .contact-value { font-size: 0.85rem; }
+    .action-btn { padding: 11px 18px; font-size: 0.9rem; }
+    .location-map { min-height: 250px; }
+    .location-map iframe { min-height: 250px; }
+    .email-text { font-size: 0.9rem; }
+    .email-link { padding: 12px 25px; font-size: 0.9rem; }
+}
+
+/* 7.3 SMALL PHONES & LANDSCAPE */
+@media (max-width: 375px) {
+    .container { padding: 18px 12px; }
+    .header-section { gap: 10px; margin-bottom: 18px; }
+    .logo { height: 55px; max-width: 80px; }
+    h1 { font-size: 1.35rem; margin-bottom: 6px; }
+    .welcome-text { font-size: 1.2rem; font-weight: 700; }
+    .section-title { font-size: 1.1rem; }
+    .service-item { padding: 10px; font-size: 0.85rem; }
+    .contact-section, .location-section, .email-section { padding: 15px 12px; }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .action-btn, .email-link { min-height: 44px; display: flex; align-items: center; justify-content: center; }
+    .service-item { min-height: 44px; }
+    .action-btn:active, .email-link:active { transform: scale(0.98); opacity: 0.9; }
+    .service-item:active { transform: scale(0.98); }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+    .container { max-width: 100%; padding: 20px; }
+    .header-section { flex-direction: row; text-align: left; }
+    .logo { height: 60px; }
+    h1 { font-size: 1.5rem; }
+}
